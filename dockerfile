@@ -16,5 +16,5 @@ RUN mkdocs build
 RUN cp -r site/* /var/www/localhost/htdocs/
 COPY default.conf /etc/nginx/http.d
 
-EXPOSE 8888
+EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
