@@ -15,7 +15,6 @@ WORKDIR vnerd-docs
 RUN mkdocs build
 RUN cp -r site/* /var/www/localhost/htdocs/
 COPY default.conf /etc/nginx/http.d
-#RUN nginx -s reload
 
-EXPOSE 80
+EXPOSE 8888
 CMD ["nginx", "-g", "daemon off;"]
